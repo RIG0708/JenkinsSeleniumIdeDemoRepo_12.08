@@ -1,27 +1,39 @@
 pipeline {
     agent any
 
-    stages("Checkout code") {
+    stages {
+        stage('Checkout code') {
        // checkout the repository
-       steps {
-        git branch: 'main', url: 'https://github.com/RIG0708/JenkinsSeleniumIdeDemoRepo_12.08'
-       }
+           steps {
+               git branch: 'main', url: 'https://github.com/RIG0708/JenkinsSeleniumIdeDemoRepo_12.08'
+            }
 
     }
-    stages("Set up .Net Core") {
+    stage('Set up .Net Core') {
      // install dot net
+        steps {
+        
+        }
         
     }
-    stages("Restore dependencies") {
+    stage('Restore dependencies') {
       // install dependencies
+      steps {
+        
+        }
         
     }
-    stages("Build") {
+    stage('Build') {
       // build
+        steps {
         
+        }
     }
-    stages("Run Tests") {
+    stage('Run Tests') {
       // run test
+        steps {
         
+        }
+    }
     }
 }
